@@ -1,5 +1,5 @@
 const express = require('express');
-const bodyparser = require('body-parser');
+const bodyParser = require('body-parser');
 
 const app = express();
 
@@ -14,3 +14,9 @@ app.listen(port, () => {
   console.log('Server Started');
 
 })
+
+app.get('/', (req, res) => {
+
+  res.sendFile(__dirname + '/index.html');
+
+});
